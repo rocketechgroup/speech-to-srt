@@ -31,12 +31,3 @@ gcloud iam service-accounts keys create ./speech-to-srt.json --iam-account speec
 ```
 export GOOGLE_APPLICATION_CREDENTIALS=./speech-to-srt.json
 ```
-
-## To convert a WAV file to FLAC
-This is required in order to use the Speech to Text API
-
-```
-brew install libav
-```
-
-Convert
