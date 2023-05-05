@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  speech-to-srt:
+    build: .
+    ports:
+      - "8081:8000"
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    environment:
+      - PROJECT_ID=rocketech-de-pgcp-sandbox
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials/speech-to-srt.json
+    volumes:
+      - ./speech-to-srt.json:/app/credentials/speech-to-srt.json
+      - ./samples:/home/app/samples
+      - ./output:/home/app/output
